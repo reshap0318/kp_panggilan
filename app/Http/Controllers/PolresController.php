@@ -196,7 +196,7 @@ class PolresController extends Controller
       $panggilans = $panggilans->whereRAW("DATE_FORMAT(rekap_panggilans.tanggal, '%Y%m%d') BETWEEN '$mulai' AND '$akhir' or polres.id not in (select polres_id rekap_panggilans where DATE_FORMAT(rekap_panggilans.tanggal, '%Y%m%d') BETWEEN '$mulai' AND '$akhir')");
 
       if($request->kategori){
-        $panggilans = $panggilans->orderby($request->kategori,'asc');
+        $panggilans = $panggilans->orderby($request->kategori,'desc');
       }
 
       $panggilans = $panggilans->groupby('polres.nama')->get();

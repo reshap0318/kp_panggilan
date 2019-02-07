@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Login</title>
+  <link rel="icon" href="{{asset('img/unand.png')}}" type="image/ico" />
 	<link rel="stylesheet" href="{{asset('dira/login/style.css')}}">
 
 <body>
